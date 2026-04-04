@@ -16,7 +16,8 @@ Funciona en cualquier consolas **PlayStation 5** con Jailbreak (incluido la últ
 
 ### 📦 Creditos
 
-- egycnq [proyecto inicial]
+- egycnq [proyecto inicial NES Release]
+- BrinooTk [SNES Release]
 
 
 
