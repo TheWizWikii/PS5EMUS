@@ -1,0 +1,52 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="PS5EMUS.MainWindow"
+        Title="PS5EMUS Multi-Launcher" 
+        Width="500" Height="520"
+        Background="#1e1e1e"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <RowDefinition Height="Auto"/> <RowDefinition Height="Auto"/> <RowDefinition Height="Auto"/> <RowDefinition Height="*"/>    </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,15">
+            <TextBlock Text="PS5EMUS" FontSize="28" FontWeight="ExtraBold" Foreground="#0078d4" HorizontalAlignment="Center"/>
+            <TextBlock Text="TheWiz Multi-Emulator Injector" FontSize="12" Foreground="Gray" HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,15">
+            <TextBlock Text="Seleccionar Emulador:" Foreground="White" Margin="0,0,0,5"/>
+            <ComboBox x:Name="EmuSelector" SelectedIndex="0" HorizontalAlignment="Stretch" Background="#2d2d2d" Foreground="White">
+                <ComboBoxItem Content="NES (Famicom)"/>
+                <ComboBoxItem Content="SNES (Super Famicom)"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Spacing="10">
+            <StackPanel>
+                <TextBlock Text="IP de la Consola:" Foreground="White" Margin="0,0,0,5"/>
+                <TextBox x:Name="IpInput" Text="192.168.1.15" Background="#2d2d2d" Foreground="White" BorderBrush="#3d3d3d"/>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Carpeta de ROMs:" Foreground="White" Margin="0,0,0,5"/>
+                <Grid ColumnDefinitions="*, Auto">
+                    <TextBox x:Name="PathInput" Grid.Column="0" Background="#2d2d2d" Foreground="White" BorderBrush="#3d3d3d"/>
+                    <Button Grid.Column="1" Content="??" Click="OnBrowseClicked" Margin="5,0,0,0" Background="#3d3d3d"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Margin="0,15,0,15" Spacing="10">
+            <CheckBox x:Name="SkipUpload" Content="Omitir subida de archivos" Foreground="#aaaaaa" FontSize="12"/>
+            <Button x:Name="LaunchButton" Content="LANZAR EMULADOR" Click="OnLaunchClicked" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Height="33" FontSize="16" FontWeight="Bold" Background="#0078d4" Foreground="White" CornerRadius="5"/>
+        </StackPanel>
+
+        <Border Grid.Row="4" Background="Black" CornerRadius="5" BorderBrush="#333333" BorderThickness="1">
+            <ScrollViewer>
+                <TextBlock x:Name="StatusLog" Text="Listo." Margin="10" FontSize="11" FontFamily="Consolas, Monospace" Foreground="#00ff00" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

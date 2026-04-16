@@ -1,0 +1,2 @@
+C:\Users\Manu\source\repos\PS5EMUS\PS5EMUS\bin\Release\net8.0\publish\win-x86\PS5EMUS.pdb
+C:\Users\Manu\source\repos\PS5EMUS\PS5EMUS\bin\Release\net8.0\publish\win-x86\PS5EMUS.exe
